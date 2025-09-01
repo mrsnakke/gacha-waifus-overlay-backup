@@ -1,0 +1,10 @@
+http://localhost:8085/admin/clear-all-data?confirm=true
+
+
+
+fix 
+-actualizacion de navegador
+agregar mas pull
+si te sale un pj de season y ya lo tiene este se rerrolea y no baja el contador de stok
+-
+//comando para ver cuantos personajes te faltan 4 estrellas y 5 estrellas pero sin contar los que tengan stok 0

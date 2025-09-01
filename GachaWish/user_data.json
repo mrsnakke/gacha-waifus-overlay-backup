@@ -1,0 +1,106 @@
+{
+  "pity_counters": {
+    "%user%": {
+      "4_star": 10,
+      "5_star": 32,
+      "total_pulls": 205,
+      "guaranteed_seasonal_5_star": false
+    },
+    "ImFer0": {
+      "4_star": 4,
+      "5_star": 51,
+      "total_pulls": 505,
+      "guaranteed_seasonal_5_star": false
+    },
+    "Yuan64": {
+      "4_star": 6,
+      "5_star": 19,
+      "total_pulls": 635,
+      "guaranteed_seasonal_5_star": false
+    },
+    "Daii_vv": {
+      "4_star": 6,
+      "5_star": 2,
+      "total_pulls": 296,
+      "guaranteed_seasonal_5_star": true
+    },
+    "drarkmun": {
+      "4_star": 0,
+      "5_star": 42,
+      "total_pulls": 242,
+      "guaranteed_seasonal_5_star": true
+    },
+    "Akashid1": {
+      "4_star": 4,
+      "5_star": 18,
+      "total_pulls": 340,
+      "guaranteed_seasonal_5_star": false
+    },
+    "evilniwde39": {
+      "4_star": 1,
+      "5_star": 3,
+      "total_pulls": 493,
+      "guaranteed_seasonal_5_star": false
+    },
+    "Battle_ship": {
+      "4_star": 8,
+      "5_star": 30,
+      "total_pulls": 30,
+      "guaranteed_seasonal_5_star": false
+    },
+    "SymphonyzMiaus": {
+      "4_star": 1,
+      "5_star": 24,
+      "total_pulls": 43,
+      "guaranteed_seasonal_5_star": false
+    },
+    "Luchiowo": {
+      "4_star": 5,
+      "5_star": 20,
+      "total_pulls": 100,
+      "guaranteed_seasonal_5_star": true
+    },
+    "Geostav": {
+      "4_star": 5,
+      "5_star": 5,
+      "total_pulls": 5,
+      "guaranteed_seasonal_5_star": false
+    },
+    "Darkoria88": {
+      "4_star": 10,
+      "5_star": 70,
+      "total_pulls": 70,
+      "guaranteed_seasonal_5_star": false
+    },
+    "Marcelo_Pj": {
+      "4_star": 9,
+      "5_star": 13,
+      "total_pulls": 120,
+      "guaranteed_seasonal_5_star": true
+    },
+    "Daiferdas02": {
+      "4_star": 10,
+      "5_star": 10,
+      "total_pulls": 10,
+      "guaranteed_seasonal_5_star": false
+    },
+    "JoseAguacate": {
+      "4_star": 5,
+      "5_star": 5,
+      "total_pulls": 5,
+      "guaranteed_seasonal_5_star": false
+    },
+    "gerssh": {
+      "4_star": 4,
+      "5_star": 18,
+      "total_pulls": 18,
+      "guaranteed_seasonal_5_star": false
+    },
+    "MrSnakeVT": {
+      "4_star": 4,
+      "5_star": 5,
+      "total_pulls": 5,
+      "guaranteed_seasonal_5_star": false
+    }
+  }
+}

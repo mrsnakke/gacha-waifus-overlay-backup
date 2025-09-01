@@ -1,0 +1,56 @@
+**Explicación de las URLs /pull-single y /pull-multi**
+
+Este servidor Node.js con Express y WebSockets simula un sistema de "gacha" (similar a las cajas de botín o sorteos en videojuegos).
+
+**1. URL: `http://localhost:8085/pull-single?user=%user%`**
+
+*   **Propósito:** Esta URL se utiliza para realizar una única tirada (un "pull" individual) en el sistema de gacha para un usuario específico.
+*   **Parámetro `%user%`:** El valor de `%user%` (por ejemplo, `http://localhost:8085/pull-single?user=Juanito`) se utiliza para identificar al usuario que está realizando la tirada. Si no se proporciona, se usa 'test-user' por defecto.
+*   **Proceso al ser llamada:**
+    1.  El servidor recibe la solicitud GET.
+    2.  Identifica al `redeemer` (el usuario) de la consulta.
+    3.  Llama a la función asíncrona `performSinglePull(redeemer)`.
+    4.  Dentro de `performSinglePull`:
+        *   Verifica si el usuario ya tiene un contador de "pity" (un mecanismo para garantizar la obtención de objetos raros después de un cierto número de intentos fallidos). Si no lo tiene, inicializa un nuevo contador para ese usuario con valores predeterminados (`4_star: 0`, `5_star: 0`, `total_pulls: 0`).
+        *   Determina la rareza del personaje obtenido (`3_star`, `4_star`, `5_star`, `6_star`) basándose en las probabilidades definidas en `gacha_config.json` y los umbrales de "pity" del usuario (`pity_data.json`). El "pity" suave y duro aumenta las probabilidades de obtener personajes de 4 y 5 estrellas a medida que el usuario no los obtiene.
+        *   Selecciona un personaje aleatorio de la rareza determinada, eligiendo entre el banner estándar o el banner de temporada (con una probabilidad del 50% para 4 y 5 estrellas, y solo estándar para 3 y 6 estrellas). Los datos de los personajes se cargan de la carpeta `GachaWish/gacha_data/characters/`.
+        *   Actualiza los contadores de "pity" del usuario: si se obtiene un personaje de 5 estrellas, el contador de 5 estrellas se reinicia; si se obtiene uno de 4 estrellas, el contador de 4 estrellas se reinicia. En cualquier caso, ambos contadores de 4 y 5 estrellas se incrementan si no se obtienen esas rarezas, y el contador `total_pulls` siempre se incrementa.
+        *   **Guarda los datos del usuario actualizados** en el archivo `GachaWish/user_data.json`.
+        *   Prepara la información del personaje obtenido para ser enviada al cliente.
+    5.  Una vez que `performSinglePull` devuelve el personaje, el servidor envía un mensaje a todos los clientes conectados a través de WebSockets (por ejemplo, una superposición de transmisión) con los detalles de la tirada (tipo 'single', usuario y personaje obtenido).
+    6.  Finalmente, el servidor responde a la solicitud HTTP con un estado 200 y un mensaje de confirmación.
+
+**2. URL: `http://localhost:8085/pull-multi?user=%user%`**
+
+*   **Propósito:** Esta URL se utiliza para realizar múltiples tiradas (actualmente 5 tiradas) en el sistema de gacha para un usuario específico.
+*   **Parámetro `%user%`:** Al igual que en `/pull-single`, el valor de `%user%` identifica al usuario.
+*   **Proceso al ser llamada:**
+    1.  El servidor recibe la solicitud GET.
+    2.  Identifica al `redeemer` (el usuario).
+    3.  Realiza un bucle 5 veces, llamando a la función `performSinglePull(redeemer)` en cada iteración. Esto significa que cada una de las 5 tiradas sigue la misma lógica de selección de rareza, personaje y actualización de "pity" que una tirada individual.
+    4.  Cada vez que `performSinglePull` se ejecuta, **los datos del usuario se guardan en `GachaWish/user_data.json`**. Esto ocurre después de cada tirada individual dentro del bucle.
+    5.  Después de completar las 5 tiradas, el servidor recopila los resultados de todos los personajes obtenidos.
+    6.  Envía un único mensaje a todos los clientes conectados a través de WebSockets con los detalles de la tirada múltiple (tipo 'multi', usuario y una lista de los 5 personajes obtenidos).
+    7.  Finalmente, el servidor responde a la solicitud HTTP con un estado 200 y un mensaje de confirmación.
+
+**3. ¿Qué datos estamos guardando y dónde?**
+
+El servidor guarda principalmente los datos relacionados con el progreso de "pity" de cada usuario.
+
+*   **Archivo:** `GachaWish/user_data.json`
+*   **Contenido:** Este archivo almacena un objeto JSON donde cada clave es el nombre de un usuario (el valor de `%user%`) y el valor asociado es un objeto que contiene los contadores de "pity" para ese usuario.
+    *   `pity_counters`: Un objeto que contiene:
+        *   `'4_star'`: El número de tiradas desde la última vez que se obtuvo un personaje de 4 estrellas.
+        *   `'5_star'`: El número de tiradas desde la última vez que se obtuvo un personaje de 5 estrellas.
+        *   `'total_pulls'`: El número total de tiradas realizadas por ese usuario.
+*   **Cuándo se guarda:** Los datos en `user_data.json` se actualizan y se escriben en el disco **después de cada tirada individual** (ya sea que se llame directamente desde `/pull-single` o como parte de un bucle en `/pull-multi`). Esto asegura que el progreso de "pity" del usuario se persista incluso si el servidor se reinicia.
+
+**Otros archivos de datos (leídos, no modificados por estas URLs):**
+
+*   `web/gacha_config.json`: Contiene las reglas generales del gacha, como las probabilidades de rareza y las probabilidades de selección de banner.
+*   `GachaWish/gacha_data/banners/standard_banner.json`: Define los personajes disponibles en el banner estándar por rareza.
+*   `GachaWish/gacha_data/banners/seasonal_banner.json`: Define los personajes disponibles en el banner de temporada por rareza.
+*   `GachaWish/pity_data.json`: Contiene los umbrales de "pity" suave y duro para cada rareza.
+*   `GachaWish/gacha_data/characters/*.json`: Archivos individuales que contienen los detalles (nombre, descripción, URL de imagen, etc.) de cada personaje disponible en el gacha.
+
+En resumen, las URLs `/pull-single` y `/pull-multi` activan la lógica de gacha del servidor, calculan un resultado basado en probabilidades y el "pity" del usuario, y lo más importante, **persisten el estado de "pity" de cada usuario en `GachaWish/user_data.json`** después de cada tirada.

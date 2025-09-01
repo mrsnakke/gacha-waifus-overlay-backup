@@ -1,0 +1,18 @@
+{
+  "pity_thresholds": {
+    "3_star": {
+      "soft_pity": 5,
+      "hard_pity": 10
+    },
+    "4_star": {
+      "soft_pity": 8,
+      "hard_pity": 10
+    },
+    "5_star": {
+      "soft_pity": 75,
+      "hard_pity": 90
+    }
+  },
+  "six_star_fixed_acquisition_pulls": 10080,
+  "explanation": "Este archivo define el sistema de 'pity' para la obtención de personajes. 'pity_thresholds' especifica los umbrales de 'pity' (suave y duro) para personajes de 3, 4 y 5 estrellas. El 'pity' para estos personajes se acumula con cada tirada sin obtener un personaje de la rareza deseada, aumentando la probabilidad (pity suave) o garantizando la obtención (pity duro). Los personajes de 6 estrellas (o super raros) no están incluidos en el sistema de 'pity' regular. En su lugar, 'six_star_fixed_acquisition_pulls' define un valor fijo de tiradas (por ejemplo, 180 tiradas) después de las cuales se garantiza la obtención de un personaje de 6 estrellas, independientemente del 'pity' acumulado para otras rarezas."
+}

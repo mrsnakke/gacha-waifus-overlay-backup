@@ -1,0 +1,15 @@
+{
+  "name": "gacha-waifus-overlay",
+  "version": "1.0.0",
+  "description": "Un overlay de Gacha de waifus para Streamer.bot usando websockets.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "mrsnakevt",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.17.0"
+  }
+}

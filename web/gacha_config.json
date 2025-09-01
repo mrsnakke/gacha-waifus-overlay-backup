@@ -1,0 +1,35 @@
+{
+  "gacha_rules": {
+    "rarity_probabilities": {
+      "3_star": 0.943,
+      "4_star": 0.051,
+      "5_star": 0.006,
+      "6_star": 0.000001
+    },
+    "banner_selection_probabilities": {
+      "4_star_and_above": {
+        "standard_banner": 0.7,
+        "seasonal_banner": 0.3
+      }
+    },
+    "six_star_character_stock": 1,
+    "six_star_character_name": "SuperRareChar",
+    "six_star_character_image_filename": "img/characters/6-star/SuperRareChar.webp",
+    "six_star_character_element": "Cosmic"
+  },
+  "animation_durations": {
+    "preview_display": 3000,
+    "gashapon_animation": 4000,
+    "multi_pull_display": 5000,
+    "five_star_reveal": 6000,
+    "single_pull_display": 3000
+  },
+  "character_stocks": {
+    "Zero Two": 0,
+    "Hatsune Miku": 0,
+    "Yuna (IA)": 0,
+    "SuperRareChar": 0,
+    "Marin Kitagawa": 0,
+    "Meredith": 0
+  }
+}
