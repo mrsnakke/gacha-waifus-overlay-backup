@@ -1,5 +1,6 @@
 {
   "name": "Hatsune Miku",
-  "rarity": 5,
-  "image_url": "public/img/characters/5-star-seasonal/Hatsune Miku.png"
+  "rarity": "5_star",
+  "image_url": "img/characters/5_star/Hatsune Miku.jpg",
+  "stock": 0
 }

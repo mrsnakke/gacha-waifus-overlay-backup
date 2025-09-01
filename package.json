@@ -10,6 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
+    "multer": "^2.0.2",
+    "open": "^10.2.0",
+    "uuid": "^11.1.0",
     "ws": "^8.17.0"
   }
 }

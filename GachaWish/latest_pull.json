@@ -1,12 +1,8 @@
 {
-  "redeemer": "MrSnakeVT",
+  "redeemer": "%user%",
   "characters": [
-    "Gold Ship",
-    "Pan Duro",
-    "Cepillos Dental",
-    "Chainsaw",
-    "Blue Rat"
+    "Chainsaw"
   ],
-  "pulls_until_guaranteed_5_star": 85,
+  "pulls_until_guaranteed_5_star": 58,
   "is_5_star_guaranteed_seasonal": false
 }

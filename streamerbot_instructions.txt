@@ -1,0 +1,74 @@
+**Instrucciones para la Integración de Tradeo con Streamer.bot**
+
+Aquí tienes una guía paso a paso para configurar el comando `!trade` en Streamer.bot y conectarlo con tu nuevo sistema de tradeo.
+
+**1. Crear un nuevo Comando:**
+
+*   Ve a la pestaña `Commands` en Streamer.bot.
+*   Haz clic derecho y selecciona `Add`.
+*   **Command:** `!trade`
+*   **Location:** `Twitch` -> `Chat`
+*   **Enabled:** Asegúrate de que esté marcado.
+
+**2. Configurar la Acción asociada al Comando:**
+
+*   Ve a la pestaña `Actions`.
+*   Crea una nueva Acción y llámala, por ejemplo, `Gacha Trade System`.
+*   Vuelve al comando `!trade` y asígnale esta nueva Acción.
+
+**3. Añadir Sub-Acciones a `Gacha Trade System`:**
+
+Dentro de la Acción `Gacha Trade System`, añade las siguientes sub-acciones en orden:
+
+*   **Sub-Acción 1: Obtener Argumentos del Chat**
+    *   `Twitch` -> `Get User Info For Target`
+        *   Esto llenará la variable `%target%` con el nombre del usuario mencionado (ej. `@usuario_receptor`).
+    *   `Core` -> `Get Argument from Input`
+        *   **Source Type:** `Input`
+        *   **Argument:** `%1` (para el usuario receptor)
+        *   **Variable Name:** `receivingPlayer`
+    *   `Core` -> `Get Arguments from Input`
+        *   **Source Type:** `Input`
+        *   **From Argument:** `2`
+        *   **To End:** Marcado
+        *   **Variable Name:** `characterName`
+
+*   **Sub-Acción 2: Realizar la Petición a la API**
+    *   `Network` -> `Fetch/GET URL` (aunque usaremos POST, esta es la sub-acción correcta).
+    *   **Method:** `POST`
+    *   **URL:** `http://localhost:8085/api/trade`
+    *   **Headers:**
+        *   `Content-Type`: `application/json`
+    *   **Body:**
+        ```json
+        {
+            "offeringPlayer": "%user%",
+            "receivingPlayer": "%receivingPlayer%",
+            "characterName": "%characterName%"
+        }
+        ```
+    *   **Variable for Response:** `apiResponse`
+    *   **Variable for Status Code:** `apiStatusCode`
+
+*   **Sub-Acción 3: Manejar la Respuesta de la API**
+    *   Añade una sentencia `If/Else`:
+        *   **If `apiStatusCode` equals `201` (éxito):**
+            *   `Twitch` -> `Send Message to Channel`
+            *   **Message:** `@%user%, has ofrecido %characterName% a @%receivingPlayer%. ¡Debe aceptarlo en la página de trades!`
+        *   **Else:**
+            *   `Twitch` -> `Send Message to Channel`
+            *   **Message:** `@%user%, hubo un error al crear el trade. Razón: %apiResponse%`
+
+**Resumen del Flujo:**
+
+1.  Un usuario escribe en el chat: `!trade @MrSnakke Pan Duro`
+2.  Streamer.bot captura el comando.
+3.  La Acción extrae:
+    *   `%user%` = (quien escribió el comando)
+    *   `receivingPlayer` = `MrSnakke`
+    *   `characterName` = `Pan Duro`
+4.  Envía estos datos a tu servidor Node.js.
+5.  Tu servidor procesa la lógica del trade.
+6.  Streamer.bot recibe la respuesta y notifica al chat.
+
+Con esto, la integración estará completa. El último paso será probar todo el sistema.

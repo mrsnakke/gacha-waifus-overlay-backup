@@ -87,16 +87,36 @@ async function putStars(rarity, targetDiv) {
         targetDiv.append(star_img);
 
         // Reproducir sonido secuencialmente
-        if (i === numericRarity && numericRarity >= 5) {
-            starSounds.legendary.play();
-        } else if (i === 4) {
-            starSounds.rare.play();
-        } else if (i <= 3) {
-            starSounds.common.cloneNode().play(); // Usamos cloneNode para poder reproducirlo rápido
+        try {
+            if (i === numericRarity && numericRarity >= 5) {
+                await playSound(starSounds.legendary);
+            } else if (i === 4) {
+                await playSound(starSounds.rare);
+            } else if (i <= 3) {
+                await playSound(starSounds.common.cloneNode()); // Usamos cloneNode para poder reproducirlo rápido
+            }
+        } catch (e) {
+            console.warn("No se pudo reproducir el sonido de estrella:", e.message);
         }
         
         // Pausa entre cada sonido de estrella para que no se solapen
         await new Promise(r => setTimeout(r, 180)); 
+    }
+}
+
+async function playSound(audioElement) {
+    try {
+        // Asegurarse de que cualquier audio anterior se detenga para evitar solapamientos
+        audioElement.currentTime = 0;
+        await audioElement.play();
+    } catch (error) {
+        // Este error es esperado si la política de autoplay del navegador está activa.
+        // Para OBS, la solución es configurar la fuente de navegador correctamente.
+        if (error.name === 'NotAllowedError') {
+            console.warn(`Error de autoplay: ${error.message}. Esto es normal si no se ha configurado la fuente de navegador en OBS para permitir audio automáticamente.`);
+        } else {
+            console.error("Error al reproducir sonido:", error);
+        }
     }
 }
 
@@ -117,10 +137,10 @@ async function displaySinglePull(redeemer, character) {
     } else {
         starContainer.innerHTML = '';
     }
-    putStars(character.rarity, starContainer);
+    await putStars(character.rarity, starContainer); // Asegurarse de que putStars se complete
 
     singlePullDisplay.classList.remove('hidden');
-    new Audio("sounds/character_appearance.ogg").play();
+    await playSound(new Audio("sounds/character_appearance.ogg"));
     await new Promise(r => setTimeout(r, SINGLE_PULL_DISPLAY_DURATION));
     console.log("Tirada única mostrada.");
 }
@@ -331,7 +351,7 @@ async function displayFiveSixStarReveal(redeemer, character) {
     fiveStarImage.alt = character.name;
 
     fiveStarReveal.classList.remove('hidden');
-    new Audio("sounds/character_appearance.ogg").play(); // Sonido para la revelación
+    await playSound(new Audio("sounds/character_appearance.ogg")); // Sonido para la revelación
     await new Promise(r => setTimeout(r, FIVE_SIX_STAR_REVEAL_DURATION));
     fiveStarReveal.classList.add('hidden'); // Ocultar después de la duración
     console.log("Revelación especial terminada.");

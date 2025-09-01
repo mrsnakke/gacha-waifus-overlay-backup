@@ -3,7 +3,7 @@
     "%user%": {
       "4_star": 10,
       "5_star": 32,
-      "total_pulls": 205,
+      "total_pulls": 295,
       "guaranteed_seasonal_5_star": false
     },
     "ImFer0": {
@@ -97,9 +97,9 @@
       "guaranteed_seasonal_5_star": false
     },
     "MrSnakeVT": {
-      "4_star": 4,
-      "5_star": 5,
-      "total_pulls": 5,
+      "4_star": 3,
+      "5_star": 15,
+      "total_pulls": 15,
       "guaranteed_seasonal_5_star": false
     }
   }

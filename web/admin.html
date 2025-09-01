@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Gacha</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Administración de Gacha</h1>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="characters">Personajes</button>
+            <button class="tab-button" data-tab="gacha-config">Configuración de Gacha</button>
+            <button class="tab-button" data-tab="seasonal-characters">Personajes de Temporada</button>
+            <button class="tab-button" data-tab="info">Información y Endpoints</button>
+        </nav>
+
+        <div id="characters" class="tab-content active">
+            <section id="add-character">
+                <h2>Añadir Nuevo Personaje</h2>
+                <form id="character-form">
+                    <label for="character-name">Nombre del Personaje:</label>
+                    <input type="text" id="character-name" required>
+
+                    <label for="character-rarity">Estrellas:</label>
+                    <select id="character-rarity" required>
+                        <option value="">Selecciona una rareza</option>
+                        <option value="3_star">3 Estrellas</option>
+                        <option value="4_star">4 Estrellas</option>
+                        <option value="5_star">5 Estrellas</option>
+                        <option value="6_star">6 Estrellas</option>
+                    </select>
+
+                    <label for="character-banner">Banner:</label>
+                    <select id="character-banner" required>
+                        <option value="">Selecciona un banner</option>
+                        <option value="standard_banner">Banner Estándar</option>
+                        <option value="seasonal_banner">Banner de Temporada</option>
+                    </select>
+
+                    <label for="character-image">Imagen del Personaje:</label>
+                    <input type="file" id="character-image" accept="image/*">
+                    <img id="image-preview" src="" alt="Previsualización de Imagen" style="max-width: 100px; max-height: 100px; display: none;">
+
+                    <div id="stock-section" style="display: none;">
+                        <label for="character-stock">Stock (solo para 5/6 estrellas de Banner de Temporada):</label>
+                        <input type="number" id="character-stock" min="0" value="0">
+                    </div>
+
+                    <button type="submit">Añadir Personaje</button>
+                </form>
+            </section>
+
+            <section id="character-list">
+                <h2>Personajes Existentes</h2>
+                <div id="banners-container">
+                    <!-- Los personajes se cargarán aquí -->
+                </div>
+            </section>
+        </div>
+
+        <div id="seasonal-characters" class="tab-content">
+            <h2>Personajes de Temporada</h2>
+            <section id="season-duration-config">
+                <h3>Duración de la Temporada</h3>
+                <input type="text" id="season-duration-input" placeholder="Ej: 2025-01-01 to 2025-03-31">
+                <button id="save-season-duration">Guardar Duración</button>
+            </section>
+
+            <section id="add-seasonal-character">
+                <h3>Añadir Personaje a la Temporada</h3>
+                <label for="available-characters-select">Seleccionar Personaje:</label>
+                <select id="available-characters-select"></select>
+                <label for="seasonal-character-stock">Stock:</label>
+                <input type="number" id="seasonal-character-stock" min="0" value="1">
+                <button id="add-character-to-season">Añadir a Temporada</button>
+            </section>
+
+            <section id="current-seasonal-characters">
+                <h3>Personajes Actuales de Temporada</h3>
+                <div id="seasonal-characters-list">
+                    <!-- Los personajes de temporada se cargarán aquí -->
+                </div>
+            </section>
+        </div>
+
+        <div id="gacha-config" class="tab-content">
+            <h2>Configuración de Gacha</h2>
+
+            <section id="rarity-probabilities">
+                <h3>Probabilidades de Rareza</h3>
+                <form id="rarity-form">
+                    <label for="prob-3-star">3 Estrellas:</label>
+                    <input type="number" id="prob-3-star" step="0.001" min="0" max="1" required>
+
+                    <label for="prob-4-star">4 Estrellas:</label>
+                    <input type="number" id="prob-4-star" step="0.001" min="0" max="1" required>
+
+                    <label for="prob-5-star">5 Estrellas:</label>
+                    <input type="number" id="prob-5-star" step="0.0001" min="0" max="1" required>
+
+                    <label for="prob-6-star">6 Estrellas:</label>
+                    <input type="number" id="prob-6-star" step="0.000001" min="0" max="1" required>
+
+                    <button type="submit">Actualizar Probabilidades</button>
+                </form>
+            </section>
+
+            <section id="banner-probabilities">
+                <h3>Probabilidades de Banner (4 Estrellas o más)</h3>
+                <form id="banner-prob-form">
+                    <label for="prob-standard-banner">Banner Estándar:</label>
+                    <input type="number" id="prob-standard-banner" step="0.01" min="0" max="1" required>
+
+                    <label for="prob-seasonal-banner">Banner de Temporada:</label>
+                    <input type="number" id="prob-seasonal-banner" step="0.01" min="0" max="1" required>
+
+                    <button type="submit">Actualizar Probabilidades de Banner</button>
+                </form>
+            </section>
+
+            <section id="character-stocks-config">
+                <h3>Stocks de Personajes (5/6 Estrellas de Banner de Temporada)</h3>
+                <div id="stocks-container">
+                    <!-- Los stocks de personajes se cargarán aquí -->
+                </div>
+                <button id="save-stocks-button">Guardar Stocks</button>
+            </section>
+        </div>
+
+        <div id="info" class="tab-content">
+            <h2>Información y Endpoints</h2>
+            <section id="endpoints-info">
+                <h3>Endpoints para Streamer.bot</h3>
+                <p>Usa estos enlaces en tus acciones de Streamer.bot. Reemplaza `YOUR_IP_ADDRESS` con la IP de este PC si lo usas desde otra máquina.</p>
+                <pre><code id="streamerbot-endpoints"></code></pre>
+                
+                <h3>Comandos de Administración</h3>
+                <pre><code id="admin-endpoints"></code></pre>
+
+                <h3>Página de Tradeo</h3>
+                <pre><code id="trade-endpoint"></code></pre>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
