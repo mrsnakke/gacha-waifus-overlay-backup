@@ -206,10 +206,11 @@
   },
   "MrSnakeVT": {
     "4_star": [
-      "Gold Ship"
+      "Gold Ship",
+      "Sucrose"
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 5
+    "total_pulls": 15
   }
 }
