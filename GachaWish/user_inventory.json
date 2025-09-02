@@ -10,10 +10,12 @@
     "5_star": [
       "Albedo",
       "Zero Two",
-      "Frieren"
+      "Frieren",
+      "Fubuki"
     ],
     "6_star": [],
-    "total_pulls": 295
+    "total_pulls": 306,
+    "keys": 10
   },
   "ImFer0": {
     "4_star": [
@@ -31,7 +33,8 @@
       "Zero Two"
     ],
     "6_star": [],
-    "total_pulls": 525
+    "total_pulls": 525,
+    "keys": 10
   },
   "Yuan64": {
     "4_star": [
@@ -50,7 +53,8 @@
       "Frieren"
     ],
     "6_star": [],
-    "total_pulls": 810
+    "total_pulls": 810,
+    "keys": 10
   },
   "Daii_vv": {
     "4_star": [
@@ -67,7 +71,8 @@
       "umaSnak"
     ],
     "6_star": [],
-    "total_pulls": 591
+    "total_pulls": 591,
+    "keys": 10
   },
   "drarkmun": {
     "4_star": [
@@ -84,7 +89,8 @@
       "Albedo"
     ],
     "6_star": [],
-    "total_pulls": 387
+    "total_pulls": 387,
+    "keys": 10
   },
   "Akashid1": {
     "4_star": [
@@ -101,7 +107,8 @@
       "Marin Kitagawa"
     ],
     "6_star": [],
-    "total_pulls": 345
+    "total_pulls": 345,
+    "keys": 10
   },
   "evilniwde39": {
     "4_star": [
@@ -119,7 +126,8 @@
       "Marin Kitagawa"
     ],
     "6_star": [],
-    "total_pulls": 493
+    "total_pulls": 493,
+    "keys": 10
   },
   "Battle_ship": {
     "4_star": [
@@ -131,7 +139,8 @@
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 60
+    "total_pulls": 60,
+    "keys": 10
   },
   "SymphonyzMiaus": {
     "4_star": [
@@ -143,7 +152,8 @@
       "Zero Two"
     ],
     "6_star": [],
-    "total_pulls": 43
+    "total_pulls": 43,
+    "keys": 10
   },
   "Luchiowo": {
     "4_star": [
@@ -157,7 +167,8 @@
       "Albedo"
     ],
     "6_star": [],
-    "total_pulls": 110
+    "total_pulls": 110,
+    "keys": 10
   },
   "Geostav": {
     "4_star": [
@@ -167,7 +178,8 @@
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 60
+    "total_pulls": 60,
+    "keys": 10
   },
   "Darkoria88": {
     "4_star": [
@@ -179,7 +191,8 @@
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 70
+    "total_pulls": 70,
+    "keys": 10
   },
   "Marcelo_Pj": {
     "4_star": [
@@ -198,7 +211,8 @@
       "Phoebe"
     ],
     "6_star": [],
-    "total_pulls": 415
+    "total_pulls": 415,
+    "keys": 10
   },
   "Daiferdas02": {
     "4_star": [
@@ -207,7 +221,8 @@
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 15
+    "total_pulls": 15,
+    "keys": 10
   },
   "JoseAguacate": {
     "4_star": [
@@ -218,7 +233,8 @@
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 60
+    "total_pulls": 60,
+    "keys": 10
   },
   "gerssh": {
     "4_star": [
@@ -227,7 +243,8 @@
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 18
+    "total_pulls": 18,
+    "keys": 10
   },
   "MrSnakeVT": {
     "4_star": [
@@ -236,7 +253,8 @@
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 15
+    "total_pulls": 17,
+    "keys": 11
   },
   "lDharu": {
     "4_star": [
@@ -251,7 +269,8 @@
       "diluc"
     ],
     "6_star": [],
-    "total_pulls": 170
+    "total_pulls": 170,
+    "keys": 10
   },
   "Z3dow": {
     "4_star": [
@@ -268,7 +287,8 @@
       "diluc"
     ],
     "6_star": [],
-    "total_pulls": 175
+    "total_pulls": 175,
+    "keys": 10
   },
   "niwde39": {
     "4_star": [
@@ -281,10 +301,15 @@
     "5_star": [
       "Albedo",
       "Jean",
+      "Hatsune Miku",
+      "Zero Two",
+      "Meredith",
+      "Marin Kitagawa",
       "umaSnak"
     ],
     "6_star": [],
-    "total_pulls": 375
+    "total_pulls": 375,
+    "keys": 10
   },
   "TheDarkList98": {
     "4_star": [
@@ -302,13 +327,15 @@
       "umaSnak"
     ],
     "6_star": [],
-    "total_pulls": 304
+    "total_pulls": 304,
+    "keys": 10
   },
   "aortizu": {
     "4_star": [],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 6
+    "total_pulls": 6,
+    "keys": 10
   },
   "tomoyukii": {
     "4_star": [
@@ -326,6 +353,7 @@
       "zani"
     ],
     "6_star": [],
-    "total_pulls": 350
+    "total_pulls": 350,
+    "keys": 10
   }
 }
