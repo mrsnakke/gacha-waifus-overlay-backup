@@ -31,7 +31,7 @@
       "Zero Two"
     ],
     "6_star": [],
-    "total_pulls": 505
+    "total_pulls": 525
   },
   "Yuan64": {
     "4_star": [
@@ -46,10 +46,11 @@
       "Jean",
       "Zero Two",
       "Albedo",
-      "Hatsune Miku"
+      "Hatsune Miku",
+      "Frieren"
     ],
     "6_star": [],
-    "total_pulls": 635
+    "total_pulls": 785
   },
   "Daii_vv": {
     "4_star": [
@@ -62,10 +63,11 @@
     "5_star": [
       "Jean",
       "Zero Two",
-      "Albedo"
+      "Albedo",
+      "umaSnak"
     ],
     "6_star": [],
-    "total_pulls": 296
+    "total_pulls": 576
   },
   "drarkmun": {
     "4_star": [
@@ -153,10 +155,14 @@
     "total_pulls": 100
   },
   "Geostav": {
-    "4_star": [],
+    "4_star": [
+      "Bennett",
+      "Sucrose",
+      "Gold Ship"
+    ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 5
+    "total_pulls": 55
   },
   "Darkoria88": {
     "4_star": [
@@ -175,14 +181,17 @@
       "Bennett",
       "Sucrose",
       "Gold Ship",
-      "Alice Thymefield"
+      "Alice Thymefield",
+      "Danjin"
     ],
     "5_star": [
       "Albedo",
-      "umaSnak"
+      "umaSnak",
+      "Jean",
+      "Frieren"
     ],
     "6_star": [],
-    "total_pulls": 120
+    "total_pulls": 300
   },
   "Daiferdas02": {
     "4_star": [],
@@ -213,5 +222,58 @@
     "5_star": [],
     "6_star": [],
     "total_pulls": 15
+  },
+  "lDharu": {
+    "4_star": [],
+    "5_star": [],
+    "6_star": [],
+    "total_pulls": 5
+  },
+  "Z3dow": {
+    "4_star": [
+      "Bennett",
+      "Sucrose",
+      "Gold Ship"
+    ],
+    "5_star": [],
+    "6_star": [],
+    "total_pulls": 50
+  },
+  "niwde39": {
+    "4_star": [
+      "Sucrose",
+      "Gold Ship",
+      "Bennett",
+      "Danjin",
+      "Alice Thymefield"
+    ],
+    "5_star": [
+      "Albedo",
+      "Jean",
+      "umaSnak"
+    ],
+    "6_star": [],
+    "total_pulls": 365
+  },
+  "TheDarkList98": {
+    "4_star": [
+      "Gold Ship",
+      "Sucrose",
+      "Bennett",
+      "Danjin",
+      "Alice Thymefield"
+    ],
+    "5_star": [
+      "Frieren",
+      "Jean"
+    ],
+    "6_star": [],
+    "total_pulls": 145
+  },
+  "aortizu": {
+    "4_star": [],
+    "5_star": [],
+    "6_star": [],
+    "total_pulls": 6
   }
 }
