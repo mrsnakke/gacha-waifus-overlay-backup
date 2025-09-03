@@ -193,6 +193,13 @@ async function performSinglePull(redeemer) {
         dataManager.gachaConfig.character_stocks[character.name] = Math.max(0, dataManager.gachaConfig.character_stocks[character.name] - 1);
         dataManager.characterData[character.name].stock = dataManager.gachaConfig.character_stocks[character.name];
         await dataManager.saveGachaConfig();
+
+        // Actualizar el stock en seasonalCharactersConfig si el personaje es de temporada
+        const seasonalCharIndex = dataManager.seasonalCharactersConfig.characters.findIndex(c => c.name === character.name);
+        if (seasonalCharIndex !== -1) {
+            dataManager.seasonalCharactersConfig.characters[seasonalCharIndex].stock = dataManager.gachaConfig.character_stocks[character.name];
+            await dataManager.saveSeasonalCharactersConfig();
+        }
     }
     
     await dataManager.saveUserData();
@@ -229,11 +236,30 @@ async function writeLatestPullInfo(redeemer, characters, userPity) {
     }
 }
 
+async function pullSingleWithKey(redeemer) {
+    const userInventory = await dataManager.loadUserInventory();
+
+    if (!userInventory[redeemer] || !userInventory[redeemer].keys || userInventory[redeemer].keys < 1) {
+        throw new Error('No tienes suficientes llaves para realizar un tiro.');
+    }
+
+    userInventory[redeemer].keys -= 1;
+    await dataManager.saveUserInventory(userInventory);
+
+    console.log(`[Gacha] ${redeemer} used a key. Remaining keys: ${userInventory[redeemer].keys}`);
+
+    const character = await performSinglePull(redeemer);
+    // La función updateInventoryAndPulls se llama dentro de la ruta, así que no es necesario aquí.
+    
+    return character;
+}
+
 module.exports = {
     selectRarity,
     selectCharacter,
     updateUserPity,
     performSinglePull,
     updateInventoryAndPulls,
-    writeLatestPullInfo
+    writeLatestPullInfo,
+    pullSingleWithKey
 };

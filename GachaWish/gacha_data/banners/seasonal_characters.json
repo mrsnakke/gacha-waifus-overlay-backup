@@ -3,7 +3,19 @@
   "characters": [
     {
       "name": "Frieren",
-      "stock": 1
+      "stock": 0
+    },
+    {
+      "name": "Phoebe",
+      "stock": 0
+    },
+    {
+      "name": "Chisa",
+      "stock": 0
+    },
+    {
+      "name": "Astolfo",
+      "stock": 0
     }
   ]
 }

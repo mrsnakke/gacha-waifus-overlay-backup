@@ -2,38 +2,38 @@
   "pity_counters": {
     "%user%": {
       "4_star": 10,
-      "5_star": 32,
-      "total_pulls": 295,
-      "guaranteed_seasonal_5_star": false
+      "5_star": 8,
+      "total_pulls": 306,
+      "guaranteed_seasonal_5_star": true
     },
     "ImFer0": {
       "4_star": 4,
-      "5_star": 51,
-      "total_pulls": 505,
+      "5_star": 71,
+      "total_pulls": 525,
       "guaranteed_seasonal_5_star": false
     },
     "Yuan64": {
-      "4_star": 6,
-      "5_star": 19,
-      "total_pulls": 635,
-      "guaranteed_seasonal_5_star": false
+      "4_star": 7,
+      "5_star": 37,
+      "total_pulls": 810,
+      "guaranteed_seasonal_5_star": true
     },
     "Daii_vv": {
-      "4_star": 6,
-      "5_star": 2,
-      "total_pulls": 296,
-      "guaranteed_seasonal_5_star": true
+      "4_star": 1,
+      "5_star": 64,
+      "total_pulls": 591,
+      "guaranteed_seasonal_5_star": false
     },
     "drarkmun": {
-      "4_star": 0,
-      "5_star": 42,
-      "total_pulls": 242,
-      "guaranteed_seasonal_5_star": true
+      "4_star": 1,
+      "5_star": 48,
+      "total_pulls": 387,
+      "guaranteed_seasonal_5_star": false
     },
     "Akashid1": {
-      "4_star": 4,
-      "5_star": 18,
-      "total_pulls": 340,
+      "4_star": 9,
+      "5_star": 23,
+      "total_pulls": 345,
       "guaranteed_seasonal_5_star": false
     },
     "evilniwde39": {
@@ -43,9 +43,9 @@
       "guaranteed_seasonal_5_star": false
     },
     "Battle_ship": {
-      "4_star": 8,
-      "5_star": 30,
-      "total_pulls": 30,
+      "4_star": 4,
+      "5_star": 60,
+      "total_pulls": 60,
       "guaranteed_seasonal_5_star": false
     },
     "SymphonyzMiaus": {
@@ -56,14 +56,14 @@
     },
     "Luchiowo": {
       "4_star": 5,
-      "5_star": 20,
-      "total_pulls": 100,
+      "5_star": 30,
+      "total_pulls": 110,
       "guaranteed_seasonal_5_star": true
     },
     "Geostav": {
-      "4_star": 5,
-      "5_star": 5,
-      "total_pulls": 5,
+      "4_star": 7,
+      "5_star": 60,
+      "total_pulls": 60,
       "guaranteed_seasonal_5_star": false
     },
     "Darkoria88": {
@@ -73,21 +73,21 @@
       "guaranteed_seasonal_5_star": false
     },
     "Marcelo_Pj": {
-      "4_star": 9,
-      "5_star": 13,
-      "total_pulls": 120,
-      "guaranteed_seasonal_5_star": true
+      "4_star": 4,
+      "5_star": 6,
+      "total_pulls": 415,
+      "guaranteed_seasonal_5_star": false
     },
     "Daiferdas02": {
-      "4_star": 10,
-      "5_star": 10,
-      "total_pulls": 10,
+      "4_star": 3,
+      "5_star": 15,
+      "total_pulls": 15,
       "guaranteed_seasonal_5_star": false
     },
     "JoseAguacate": {
-      "4_star": 5,
-      "5_star": 5,
-      "total_pulls": 5,
+      "4_star": 1,
+      "5_star": 60,
+      "total_pulls": 60,
       "guaranteed_seasonal_5_star": false
     },
     "gerssh": {
@@ -97,10 +97,46 @@
       "guaranteed_seasonal_5_star": false
     },
     "MrSnakeVT": {
-      "4_star": 3,
-      "5_star": 15,
-      "total_pulls": 15,
+      "4_star": 5,
+      "5_star": 17,
+      "total_pulls": 17,
       "guaranteed_seasonal_5_star": false
+    },
+    "lDharu": {
+      "4_star": 2,
+      "5_star": 17,
+      "total_pulls": 170,
+      "guaranteed_seasonal_5_star": false
+    },
+    "Z3dow": {
+      "4_star": 6,
+      "5_star": 27,
+      "total_pulls": 175,
+      "guaranteed_seasonal_5_star": false
+    },
+    "niwde39": {
+      "4_star": 9,
+      "5_star": 84,
+      "total_pulls": 375,
+      "guaranteed_seasonal_5_star": true
+    },
+    "TheDarkList98": {
+      "4_star": 4,
+      "5_star": 12,
+      "total_pulls": 304,
+      "guaranteed_seasonal_5_star": true
+    },
+    "aortizu": {
+      "4_star": 6,
+      "5_star": 6,
+      "total_pulls": 6,
+      "guaranteed_seasonal_5_star": false
+    },
+    "tomoyukii": {
+      "4_star": 3,
+      "5_star": 10,
+      "total_pulls": 350,
+      "guaranteed_seasonal_5_star": true
     }
   }
 }

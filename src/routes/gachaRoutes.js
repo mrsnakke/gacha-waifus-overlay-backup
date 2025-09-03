@@ -51,4 +51,34 @@ router.get('/pull-multi', async (req, res) => {
     res.status(200).send(`Multi pull for ${redeemer} processed.`);
 });
 
+router.get('/pull-single-x1key', async (req, res) => {
+    const redeemer = req.query.user;
+    if (!redeemer) {
+        return res.status(400).send('El parámetro "user" es requerido.');
+    }
+
+    console.log(`[API] Single pull with key triggered by ${redeemer}`);
+
+    try {
+        const character = await gachaService.pullSingleWithKey(redeemer);
+        
+        await gachaService.updateInventoryAndPulls(redeemer, [character], 1);
+        await gachaService.writeLatestPullInfo(redeemer, [character], dataManager.userData.pity_counters[redeemer]);
+
+        broadcast({
+            event: 'gacha_wish',
+            data: {
+                pull_type: 'single',
+                redeemer: redeemer,
+                character: character
+            }
+        });
+
+        res.status(200).send(`Single pull with key for ${redeemer} processed.`);
+    } catch (error) {
+        console.error(`[API] Error during single pull with key for ${redeemer}:`, error.message);
+        res.status(400).send(error.message);
+    }
+});
+
 module.exports = router;
