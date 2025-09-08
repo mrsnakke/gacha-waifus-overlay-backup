@@ -14,7 +14,7 @@
       "Fubuki"
     ],
     "6_star": [],
-    "total_pulls": 313,
+    "total_pulls": 314,
     "keys": 9
   },
   "ImFer0": {
@@ -53,8 +53,8 @@
       "Frieren"
     ],
     "6_star": [],
-    "total_pulls": 812,
-    "keys": 20
+    "total_pulls": 818,
+    "keys": 30
   },
   "Daii_vv": {
     "4_star": [
@@ -62,17 +62,21 @@
       "Sucrose",
       "Bennett",
       "Gold Ship",
-      "Danjin"
+      "Danjin",
+      "Stocking",
+      "Lenja"
     ],
     "5_star": [
       "Jean",
       "Zero Two",
       "Albedo",
-      "umaSnak"
+      "umaSnak",
+      "Dorothy",
+      "zani"
     ],
     "6_star": [],
-    "total_pulls": 591,
-    "keys": 31
+    "total_pulls": 734,
+    "keys": 53
   },
   "drarkmun": {
     "4_star": [
@@ -89,8 +93,8 @@
       "Albedo"
     ],
     "6_star": [],
-    "total_pulls": 392,
-    "keys": 5
+    "total_pulls": 393,
+    "keys": 7
   },
   "Akashid1": {
     "4_star": [
@@ -98,17 +102,21 @@
       "Sucrose",
       "Alice Thymefield",
       "Danjin",
-      "Bennett"
+      "Bennett",
+      "Lenja",
+      "Stocking"
     ],
     "5_star": [
       "Hatsune Miku",
       "Yuna (IA)",
       "Meredith",
-      "Marin Kitagawa"
+      "Marin Kitagawa",
+      "Albedo",
+      "diluc"
     ],
     "6_star": [],
-    "total_pulls": 348,
-    "keys": 29
+    "total_pulls": 529,
+    "keys": 51
   },
   "evilniwde39": {
     "4_star": [
@@ -155,8 +163,8 @@
       "diluc"
     ],
     "6_star": [],
-    "total_pulls": 121,
-    "keys": 11
+    "total_pulls": 141,
+    "keys": 15
   },
   "Luchiowo": {
     "4_star": [
@@ -164,25 +172,31 @@
       "Gold Ship",
       "Sucrose",
       "Danjin",
-      "Bennett"
+      "Bennett",
+      "Stocking"
     ],
     "5_star": [
       "Albedo"
     ],
     "6_star": [],
-    "total_pulls": 110,
+    "total_pulls": 125,
     "keys": 10
   },
   "Geostav": {
     "4_star": [
       "Bennett",
       "Sucrose",
-      "Gold Ship"
+      "Gold Ship",
+      "Danjin",
+      "Stocking",
+      "Lenja"
     ],
-    "5_star": [],
+    "5_star": [
+      "Dorothy"
+    ],
     "6_star": [],
-    "total_pulls": 61,
-    "keys": 16
+    "total_pulls": 116,
+    "keys": 20
   },
   "Darkoria88": {
     "4_star": [
@@ -190,13 +204,15 @@
       "Danjin",
       "Alice Thymefield",
       "Bennett",
-      "Gold Ship"
+      "Gold Ship",
+      "Lenja"
     ],
     "5_star": [
-      "zani"
+      "zani",
+      "diluc"
     ],
     "6_star": [],
-    "total_pulls": 85,
+    "total_pulls": 160,
     "keys": 11
   },
   "Marcelo_Pj": {
@@ -205,7 +221,9 @@
       "Sucrose",
       "Gold Ship",
       "Alice Thymefield",
-      "Danjin"
+      "Danjin",
+      "Lenja",
+      "Stocking"
     ],
     "5_star": [
       "Albedo",
@@ -213,11 +231,12 @@
       "Jean",
       "Frieren",
       "Chisa",
-      "Phoebe"
+      "Phoebe",
+      "Dorothy"
     ],
     "6_star": [],
-    "total_pulls": 419,
-    "keys": 21
+    "total_pulls": 611,
+    "keys": 7
   },
   "Daiferdas02": {
     "4_star": [
@@ -249,7 +268,7 @@
     ],
     "6_star": [],
     "total_pulls": 85,
-    "keys": 14
+    "keys": 15
   },
   "gerssh": {
     "4_star": [
@@ -264,11 +283,12 @@
   "MrSnakeVT": {
     "4_star": [
       "Gold Ship",
-      "Sucrose"
+      "Sucrose",
+      "Danjin"
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 17,
+    "total_pulls": 18,
     "keys": 12
   },
   "lDharu": {
@@ -277,15 +297,19 @@
       "Gold Ship",
       "Stocking",
       "Lenja",
-      "Sucrose"
+      "Sucrose",
+      "Bennett",
+      "Danjin"
     ],
     "5_star": [
       "zani",
-      "diluc"
+      "diluc",
+      "Albedo",
+      "Musashi"
     ],
     "6_star": [],
-    "total_pulls": 200,
-    "keys": 16
+    "total_pulls": 380,
+    "keys": 19
   },
   "Z3dow": {
     "4_star": [
@@ -302,7 +326,7 @@
       "diluc"
     ],
     "6_star": [],
-    "total_pulls": 175,
+    "total_pulls": 205,
     "keys": 10
   },
   "niwde39": {
@@ -324,7 +348,7 @@
     ],
     "6_star": [],
     "total_pulls": 375,
-    "keys": 14
+    "keys": 22
   },
   "TheDarkList98": {
     "4_star": [
@@ -348,11 +372,14 @@
   },
   "aortizu": {
     "4_star": [
-      "Alice Thymefield"
+      "Alice Thymefield",
+      "Lenja",
+      "Gold Ship",
+      "Sucrose"
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 11,
+    "total_pulls": 64,
     "keys": 10
   },
   "tomoyukii": {
@@ -380,5 +407,14 @@
     "6_star": [],
     "total_pulls": 0,
     "keys": 2
+  },
+  "Envyostnew": {
+    "4_star": [
+      "Sucrose"
+    ],
+    "5_star": [],
+    "6_star": [],
+    "total_pulls": 6,
+    "keys": 0
   }
 }
