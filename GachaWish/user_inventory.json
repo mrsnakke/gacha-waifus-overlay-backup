@@ -1,21 +1,27 @@
-﻿{
+{
   "%user%": {
     "4_star": [
       "Sucrose",
       "Bennett",
       "Alice Thymefield",
       "Gold Ship",
-      "Danjin"
+      "Danjin",
+      "Lenja",
+      "Stocking"
     ],
     "5_star": [
       "Albedo",
       "Zero Two",
       "Frieren",
-      "Fubuki"
+      "Fubuki",
+      "diluc",
+      "zani"
     ],
     "6_star": [],
-    "total_pulls": 314,
-    "keys": 9
+    "total_pulls": 563,
+    "keys": 2,
+    "pulls_until_guaranteed_5_star": 28,
+    "is_5_star_guaranteed_seasonal": false
   },
   "ImFer0": {
     "4_star": [
@@ -42,7 +48,8 @@
       "Gold Ship",
       "Bennett",
       "Alice Thymefield",
-      "Danjin"
+      "Danjin",
+      "Stocking"
     ],
     "5_star": [
       "Yuna (IA)",
@@ -50,11 +57,12 @@
       "Zero Two",
       "Albedo",
       "Hatsune Miku",
-      "Frieren"
+      "Frieren",
+      "kanami"
     ],
     "6_star": [],
-    "total_pulls": 818,
-    "keys": 30
+    "total_pulls": 863,
+    "keys": 31
   },
   "Daii_vv": {
     "4_star": [
@@ -72,10 +80,11 @@
       "Albedo",
       "umaSnak",
       "Dorothy",
-      "zani"
+      "zani",
+      "Musashi"
     ],
     "6_star": [],
-    "total_pulls": 734,
+    "total_pulls": 783,
     "keys": 53
   },
   "drarkmun": {
@@ -84,17 +93,20 @@
       "Sucrose",
       "Bennett",
       "Gold Ship",
-      "Alice Thymefield"
+      "Alice Thymefield",
+      "Lenja",
+      "Stocking"
     ],
     "5_star": [
       "Jean",
       "Yuna (IA)",
       "Chisa",
-      "Albedo"
+      "Albedo",
+      "kanami"
     ],
     "6_star": [],
-    "total_pulls": 393,
-    "keys": 7
+    "total_pulls": 478,
+    "keys": 9
   },
   "Akashid1": {
     "4_star": [
@@ -112,11 +124,13 @@
       "Meredith",
       "Marin Kitagawa",
       "Albedo",
-      "diluc"
+      "diluc",
+      "zani",
+      "kanami"
     ],
     "6_star": [],
-    "total_pulls": 529,
-    "keys": 51
+    "total_pulls": 599,
+    "keys": 52
   },
   "evilniwde39": {
     "4_star": [
@@ -163,8 +177,8 @@
       "diluc"
     ],
     "6_star": [],
-    "total_pulls": 141,
-    "keys": 15
+    "total_pulls": 142,
+    "keys": 16
   },
   "Luchiowo": {
     "4_star": [
@@ -195,8 +209,8 @@
       "Dorothy"
     ],
     "6_star": [],
-    "total_pulls": 116,
-    "keys": 20
+    "total_pulls": 131,
+    "keys": 21
   },
   "Darkoria88": {
     "4_star": [
@@ -209,11 +223,13 @@
     ],
     "5_star": [
       "zani",
-      "diluc"
+      "diluc",
+      "Musashi",
+      "Jean"
     ],
     "6_star": [],
-    "total_pulls": 160,
-    "keys": 11
+    "total_pulls": 211,
+    "keys": 10
   },
   "Marcelo_Pj": {
     "4_star": [
@@ -284,12 +300,20 @@
     "4_star": [
       "Gold Ship",
       "Sucrose",
-      "Danjin"
+      "Danjin",
+      "Lenja",
+      "Alice Thymefield",
+      "Bennett",
+      "Stocking"
     ],
-    "5_star": [],
+    "5_star": [
+      "Jean"
+    ],
     "6_star": [],
-    "total_pulls": 18,
-    "keys": 12
+    "total_pulls": 158,
+    "keys": 62,
+    "pulls_until_guaranteed_5_star": 17,
+    "is_5_star_guaranteed_seasonal": false
   },
   "lDharu": {
     "4_star": [
@@ -309,7 +333,7 @@
     ],
     "6_star": [],
     "total_pulls": 380,
-    "keys": 19
+    "keys": 22
   },
   "Z3dow": {
     "4_star": [
@@ -323,10 +347,12 @@
     ],
     "5_star": [
       "umaSnak",
-      "diluc"
+      "diluc",
+      "Fubuki",
+      "kanami"
     ],
     "6_star": [],
-    "total_pulls": 205,
+    "total_pulls": 365,
     "keys": 10
   },
   "niwde39": {
@@ -414,7 +440,16 @@
     ],
     "5_star": [],
     "6_star": [],
-    "total_pulls": 6,
+    "total_pulls": 11,
+    "keys": 0
+  },
+  "itsNoahVT": {
+    "4_star": [],
+    "5_star": [
+      "Musashi"
+    ],
+    "6_star": [],
+    "total_pulls": 5,
     "keys": 0
   }
 }
